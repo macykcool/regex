@@ -1,10 +1,12 @@
-# Title (replace with your title)
+# Special Project Contract ID with REGEX
 
-Introductory paragraph (replace this with your text)
 
 ## Summary
 
-Briefly summarize the regex you will be describing and what you will explain. Include a code snippet of the regex. Replace this text with your summary.
+Regular Expressions or REGEX, is used for various validation and matching of strings.
+The organization I work for has a sequence of numbers and letters that make up a Special Project Contract ID. All SPC must have 7390-SPC-_ _ _-00.
+The _ _ _ must be a letter followed by 2 digits. example 7390SPCA8700. 
+
 
 ## Table of Contents
 
