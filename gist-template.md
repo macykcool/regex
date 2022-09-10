@@ -1,51 +1,57 @@
-# Special Project Contract ID with REGEX
-
+# Matching an Email with REGEX –
+## /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/
 
 ## Summary
-
-Regular Expressions or REGEX, is used for various validation and matching of strings.
-The organization I work for has a sequence of numbers and letters that make up a Special Project Contract ID. All SPC must have 7390-SPC-_ _ _-00.
-The _ _ _ must be a letter followed by 2 digits. example 7390SPCA8700. 
-
+A breakdown of the REGEX for matching an email.
+Regular Expressions or REGEX are used for authentifications and matching of strings.
+ /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/ 
+ 
 
 ## Table of Contents
 
 - [Anchors](#anchors)
 - [Quantifiers](#quantifiers)
-- [OR Operator](#or-operator)
 - [Character Classes](#character-classes)
-- [Flags](#flags)
 - [Grouping and Capturing](#grouping-and-capturing)
 - [Bracket Expressions](#bracket-expressions)
-- [Greedy and Lazy Match](#greedy-and-lazy-match)
-- [Boundaries](#boundaries)
-- [Back-references](#back-references)
-- [Look-ahead and Look-behind](#look-ahead-and-look-behind)
+- [Author](#author)
+
 
 ## Regex Components
+Regex has a wide variety of uses but for now lets start with email matching.
 
 ### Anchors
+`^` : begins the start of a string
+
+`$` : ends of the string
+
+These characters are at opposite ends, whatever is nested between them is whats being searched through to find an exact match according to the nested characters.
 
 ### Quantifiers
 
-### OR Operator
+`+` : matches the previous token between one and any amount times, as many times as possible, giving back as needed.
+
+`{2,6}`  : matches the previous token between 2 and 6 times. it is used in the last group for the top level domain like .com or .org. for example. .peppermill would be long for the quatifiers and will fail.
 
 ### Character Classes
-
-### Flags
+`\d` : matches a single digit character.
 
 ### Grouping and Capturing
+`()` : whatever characters are capture within these, determines their value. 
+
+There are three sets of open and close parenthesis in this expression.
+In the first two sets, the plus quantifier is being used. 
+The third set uses `{2,6}` and is quantifying the square brackets.
 
 ### Bracket Expressions
+`[]` : matches a string if there are any of the specified characters.
 
-### Greedy and Lazy Match
-
-### Boundaries
-
-### Back-references
-
-### Look-ahead and Look-behind
+`[\da-z\.-]` :
+  - any `\d` digit will be matched.
+  - any `a-z` character will be matched.
+  - any `\.` will be matched.
+  - any `-` will be matched.
 
 ## Author
-
-A short section about the author with a link to the author's GitHub profile (replace with your information and a link to your profile)
+Macy Mannix student with UC Davis: Full Stack Coding Bootcamp
+Github: https://github.com/macykcool
